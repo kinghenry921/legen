@@ -1,0 +1,1023 @@
+<html data-dpr="1" class=" " lang="en" style="font-size: 54px;" data-scrapbook-source=""
+  data-scrapbook-create="20250321022339730">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="icon" href="favicon.ico">
+  <title>Home</title>
+
+  <meta name="designer" href="">
+
+
+  <style>
+    :root {
+      /*
+        注册页图片渐变左部及滚动条前头上侧颜色设置在src/views/login/register.vue-384       
+        登陆页图片渐变左部颜色设置在src/views/login/index.vue-309
+        滚动条上侧渐变颜色 src/views/home/index.vue-402
+        以上红色代码：#b43d30
+        
+        滚动条右侧补全图片底色代码－src/views/home/index.vue-367      background-color: #fff2ee;
+        分享好友图框外色src/views/share/index.vue-176  vcodeImg {background-color: #ffecea;
+        红色代码：#ffecea
+        */
+      --background-color: #000000;
+      /*网站外部框底色*/
+      --black: #222;
+      /*充值提款等字体颜色*/
+      --blue: #f83022;
+      /*页面金额、说明等其他字体颜色*/
+      --dark-red: #b73e31;
+      --red: #e54d42;
+      /*矿场倒计时文字颜色*/
+      --gray6: #656666;
+      /*辅助说明文字颜色*/
+      --gray9: #999;
+      /*辅助说明文字颜色*/
+      --btn-primary: #fb3324;
+      /*滚动标喇叭颜色，首页图右侧颜色，登陆按钮颜色*/
+      --form-background: #f0f3f7;
+      --border: #dadbde
+    }
+
+    /*这是蓝色备份*/
+    /*:root {*/
+    /*  --background-color: #000000;*/
+    /*  --black: #222;*/
+    /*  --blue: #0171f5;*/
+    /*  --dark-red: #f31f2b;*/
+    /*  --red: #e54d42;*/
+    /*  --gray6: #656666;*/
+    /*  --gray9: #999;*/
+    /*  --btn-primary: #0b45c9;*/
+    /*  --form-background:#f0f3f7;*/
+    /*  --border:#dadbde*/
+    /*}*/
+    html {
+      height: 100%;
+      font-size: 10vw;
+      height: -webkit-fill-available;
+    }
+
+    body {
+      /* mobile viewport bug fix */
+      min-height: -webkit-fill-available;
+    }
+
+    #app {
+      font-size: 16px;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 320px) {
+      html {
+        font-size: 32px;
+      }
+
+      #app {
+        min-width: 320px;
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (min-width: 720px) {
+      html {
+        font-size: 80px;
+      }
+
+      #app {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+
+
+  <link href="chunk-vantUI.0e1fd796.css" rel="stylesheet">
+  <link href="app.0af52082.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="register-module.943504a7.css">
+  <link rel="stylesheet" type="text/css" href="help-module.590d14b7.css">
+  <link rel="stylesheet" type="text/css" href="index-module.0244cbeb.css">
+  <style type="text/css">
+    @import url("css2.css");
+  </style>
+  <style type="text/css"></style>
+  <style class="gtranslate_css">
+    div.skiptranslate,
+    #google_translate_element2 {
+      display: none !important
+    }
+
+    body {
+      top: 0 !important
+    }
+
+    font font {
+      background-color: transparent !important;
+      box-shadow: none !important;
+      position: initial !important
+    }
+
+    .gt_float_switcher {
+      font-family: Arial;
+      font-size: 20px;
+      border-radius: 2px;
+      color: #555;
+      display: inline-block;
+      line-height: 20px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px;
+      background: #fff;
+      overflow: hidden;
+      transition: all .5s cubic-bezier(0.4, 0, 1, 1)
+    }
+
+    .gt_float_switcher img {
+      vertical-align: middle;
+      display: inline-block;
+      width: 33px;
+      height: auto;
+      margin: 0 5px 0 0;
+      border-radius: 3px
+    }
+
+    .gt_float_switcher .gt_options {
+      position: relative;
+      z-index: 777;
+      max-height: 250px;
+      overflow-y: auto;
+      transform: translateY(-30px);
+      opacity: 0;
+      cursor: pointer;
+      transition: all .8s cubic-bezier(.3, 1.1, .4, 1.1)
+    }
+
+    .gt_float_switcher .gt_options a {
+      display: block;
+      text-decoration: none;
+      padding: 6px 15px;
+      color: #444;
+      transition: color .4s linear
+    }
+
+    .gt_float_switcher .gt-selected {
+      position: relative;
+      z-index: 888;
+      background-color: #fff;
+      cursor: pointer;
+      text-transform: uppercase;
+      overflow: hidden;
+      text-align: left
+    }
+
+    .gt_float_switcher .gt_options.gt-open {
+      opacity: 1;
+      transform: translateX(0px)
+    }
+
+    .gt_float_switcher .gt_options::-webkit-scrollbar-track {
+      background-color: #f5f5f5
+    }
+
+    .gt_float_switcher .gt_options::-webkit-scrollbar {
+      width: 5px
+    }
+
+    .gt_float_switcher .gt_options::-webkit-scrollbar-thumb {
+      background-color: #888
+    }
+
+    .gt_float_switcher .gt_options a:hover {
+      background: #6070a0;
+      color: #fff
+    }
+
+    .gt_float_switcher .gt_options a.gt-current {
+      display: none
+    }
+
+    .gt_float_switcher .gt-selected .gt-current-lang {
+      padding: 6px 15px;
+      color: #333;
+      font-weight: bold
+    }
+
+    .gt_float_switcher .gt-selected .gt-current-lang span.gt-lang-code {
+      position: relative;
+      top: 2px
+    }
+
+    .gt_float_switcher .gt-selected .gt-current-lang span.gt_float_switcher-arrow {
+      display: inline-block;
+      height: 24px;
+      width: 15px;
+      vertical-align: middle;
+      background-image: url("80b5ab8e3e676d0e1419dbcefd900810f0051d35.svg");
+      background-position: 50%;
+      background-size: 11px;
+      background-repeat: no-repeat;
+      transition: all .3s;
+      transform: rotate(-180deg)
+    }
+
+    .gt_float_switcher .gt-selected .gt-current-lang span.gt_float_switcher-arrow.gt_arrow_rotate {
+      transform: rotate(0deg)
+    }
+  </style>
+  <script
+    data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement { }); } })(["gecko-coin-list-widget"])</script>
+</head>
+
+<body class="" style="font-size: 12px;" cz-shortcut-listen="true">
+  <div id="app" style="--vh:2.74px;">
+    <div data-v-035a15ff="" class="app-container">
+      <div data-v-2db9b4b4="" data-v-035a15ff="" class="nav-bar-wrap">
+        <div data-v-2db9b4b4="" class="nav-bar" style="background: rgb(255, 255, 255);">
+          <div data-v-2db9b4b4="" class="left"><img data-v-2db9b4b4="" src="Logo1.png" class="logo"><label
+              data-v-2db9b4b4="" class="name">https://neuralminer.io</label></div>
+          <div data-v-2db9b4b4="" class="right">
+            <div data-v-2db9b4b4="" class="lang-wrap cp"><img data-v-2db9b4b4="" src="lang.png" class="lang"><span
+                data-v-2db9b4b4="">English</span></div>
+
+            <a href="#" data-v-2db9b4b4="" class="help-wrap cp"><img data-v-2db9b4b4=""
+                src="server.png" class="server">
+              <!---->
+            </a>
+          </div>
+        </div>
+        <!---->
+        <!---->
+        <div class="van-overlay" style="z-index: 2031; display: none;"></div>
+        <div data-v-76bac658="" data-v-2db9b4b4="" class="van-popup van-popup--center van-popup--safe-area-inset-bottom"
+          style="z-index: 2032; display: none;">
+          <div data-v-76bac658="" class="isShowPopup">
+            <div data-v-76bac658="" class="title txtBlack">Announcement</div>
+            <div data-v-76bac658="" class="contents">
+              <p>Deposit BONUS&nbsp; <a href="#">5%</a></p>
+              <p>Official website registration link: <a href="">https://neuralminer.io</a></p>
+              <p>
+              </p>
+              <p>commission. The more users you invite, the more you earn. Referral commission income can be withdrawn
+                immediately and withdrawn at any time.</p>
+              <p>You need to understand that the best way to make money by investing in TRON mining is not to invest and
+                make money yourself, but to form your own team and lead the team to make money together.</p>
+              <p>The power of the team is huge, it will bring you a lot of profits,</p>
+            </div>
+            <div data-v-76bac658="" class="btn">I know</div>
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div data-v-035a15ff="" class="layout-content">
+        <div data-v-0b7f4d50="" data-v-035a15ff="" class="index-wrap">
+          <div data-v-0b7f4d50="" class="top-info">
+            <img src="TOP1.png" alt="" width="100%">
+
+
+
+            <div data-v-0b7f4d50="" class="total-info" style="background: linear-gradient(180deg, rgb(54 142 234) 0%, rgb(5 71 170) 100%);border-radius: 11px;
+    border: solid #ffffff1f;">
+              <div data-v-0b7f4d50="" class="left">
+                <div data-v-0b7f4d50="" class="title">Total Balance</div>
+                <div data-v-0b7f4d50="" class="number">
+                  <div data-v-0b7f4d50="" class="num">0</div>
+                  <div data-v-0b7f4d50="" class="type">USDT</div>
+                </div>
+              </div>
+              <div data-v-0b7f4d50="" class="icon-info"><img data-v-0b7f4d50="" src="icon.png" loading="lazy" alt=""
+                  draggable="false"></div>
+            </div>
+          </div>
+          <center>
+            <gecko-coin-list-widget locale="en" dark-mode="true" transparent-background="true" coin-ids=""
+              initial-currency="usd" vce-ready="" data-scrapbook-shadowdom="<div class=&quot;gecko-widget gecko-dark gecko-transparent-background&quot; locale=&quot;en&quot; style=&quot;max-width: 100%;&quot;><a href=&quot;https://www.coingecko.com/resource_redirect?locale=en&amp;amp;route=coins%2Fbitcoin&amp;amp;utm_source=neuralminer.io&amp;amp;utm_medium=coin_list_widget&amp;amp;utm_content=bitcoin%2Cethereum%2Ctether%2Cbinancecoin%2Csolana&quot; target=&quot;_blank&quot; class=&quot;gecko-list-item&quot;><span style=&quot;display: flex; align-items: center; column-gap: 6px;&quot;><img alt=&quot;Bitcoin&quot; src=&quot;bitcoin.png&quot; style=&quot;border-radius: 50%; height: 24px;&quot;><span class=&quot;gecko-text-dark gecko-medium&quot;>Bitcoin</span><span class=&quot;gecko-text-light&quot; style=&quot;font-size: 12px; margin-top: 2px;&quot;>
+        BTC
+      </span></span><span style=&quot;display: flex; align-items: center; column-gap: 8px;&quot;><span class=&quot;gecko-price gecko-text-dark&quot;>$84,526.00</span><span class=&quot;gecko-percent-change gecko-down&quot; style=&quot;font-size: 14px;&quot;><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 320 512&quot; fill=&quot;inherit&quot; style=&quot;height: 14px;&quot;><path d=&quot;M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z&quot;></path></svg>
+
+  1.5%
+</span></span></a><a href=&quot;https://www.coingecko.com/resource_redirect?locale=en&amp;amp;route=coins%2Fethereum&amp;amp;utm_source=neuralminer.io&amp;amp;utm_medium=coin_list_widget&amp;amp;utm_content=bitcoin%2Cethereum%2Ctether%2Cbinancecoin%2Csolana&quot; target=&quot;_blank&quot; class=&quot;gecko-list-item&quot;><span style=&quot;display: flex; align-items: center; column-gap: 6px;&quot;><img alt=&quot;Ethereum&quot; src=&quot;ethereum.png&quot; style=&quot;border-radius: 50%; height: 24px;&quot;><span class=&quot;gecko-text-dark gecko-medium&quot;>Ethereum</span><span class=&quot;gecko-text-light&quot; style=&quot;font-size: 12px; margin-top: 2px;&quot;>
+        ETH
+      </span></span><span style=&quot;display: flex; align-items: center; column-gap: 8px;&quot;><span class=&quot;gecko-price gecko-text-dark&quot;>$1,987.70</span><span class=&quot;gecko-percent-change gecko-down&quot; style=&quot;font-size: 14px;&quot;><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 320 512&quot; fill=&quot;inherit&quot; style=&quot;height: 14px;&quot;><path d=&quot;M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z&quot;></path></svg>
+
+  1.9%
+</span></span></a><a href=&quot;https://www.coingecko.com/resource_redirect?locale=en&amp;amp;route=coins%2Ftether&amp;amp;utm_source=neuralminer.io&amp;amp;utm_medium=coin_list_widget&amp;amp;utm_content=bitcoin%2Cethereum%2Ctether%2Cbinancecoin%2Csolana&quot; target=&quot;_blank&quot; class=&quot;gecko-list-item&quot;><span style=&quot;display: flex; align-items: center; column-gap: 6px;&quot;><img alt=&quot;Tether&quot; src=&quot;Tether.png&quot; style=&quot;border-radius: 50%; height: 24px;&quot;><span class=&quot;gecko-text-dark gecko-medium&quot;>Tether</span><span class=&quot;gecko-text-light&quot; style=&quot;font-size: 12px; margin-top: 2px;&quot;>
+        USDT
+      </span></span><span style=&quot;display: flex; align-items: center; column-gap: 8px;&quot;><span class=&quot;gecko-price gecko-text-dark&quot;>$0.9994</span><span class=&quot;gecko-percent-change gecko-down&quot; style=&quot;font-size: 14px;&quot;><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 320 512&quot; fill=&quot;inherit&quot; style=&quot;height: 14px;&quot;><path d=&quot;M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z&quot;></path></svg>
+
+  0.1%
+</span></span></a><a href=&quot;https://www.coingecko.com/resource_redirect?locale=en&amp;amp;route=coins%2Fbinancecoin&amp;amp;utm_source=neuralminer.io&amp;amp;utm_medium=coin_list_widget&amp;amp;utm_content=bitcoin%2Cethereum%2Ctether%2Cbinancecoin%2Csolana&quot; target=&quot;_blank&quot; class=&quot;gecko-list-item&quot;><span style=&quot;display: flex; align-items: center; column-gap: 6px;&quot;><img alt=&quot;BNB&quot; src=&quot;bnb-icon2_2x.png&quot; style=&quot;border-radius: 50%; height: 24px;&quot;><span class=&quot;gecko-text-dark gecko-medium&quot;>BNB</span><span class=&quot;gecko-text-light&quot; style=&quot;font-size: 12px; margin-top: 2px;&quot;>
+        BNB
+      </span></span><span style=&quot;display: flex; align-items: center; column-gap: 8px;&quot;><span class=&quot;gecko-price gecko-text-dark&quot;>$628.19</span><span class=&quot;gecko-percent-change gecko-up&quot; style=&quot;font-size: 14px;&quot;><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 320 512&quot; style=&quot;height: 14px;&quot;><path d=&quot;M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z&quot;></path></svg>
+
+  1.1%
+</span></span></a><a href=&quot;https://www.coingecko.com/resource_redirect?locale=en&amp;amp;route=coins%2Fsolana&amp;amp;utm_source=neuralminer.io&amp;amp;utm_medium=coin_list_widget&amp;amp;utm_content=bitcoin%2Cethereum%2Ctether%2Cbinancecoin%2Csolana&quot; target=&quot;_blank&quot; class=&quot;gecko-list-item&quot;><span style=&quot;display: flex; align-items: center; column-gap: 6px;&quot;><img alt=&quot;Solana&quot; src=&quot;solana.png&quot; style=&quot;border-radius: 50%; height: 24px;&quot;><span class=&quot;gecko-text-dark gecko-medium&quot;>Solana</span><span class=&quot;gecko-text-light&quot; style=&quot;font-size: 12px; margin-top: 2px;&quot;>
+        SOL
+      </span></span><span style=&quot;display: flex; align-items: center; column-gap: 8px;&quot;><span class=&quot;gecko-price gecko-text-dark&quot;>$128.46</span><span class=&quot;gecko-percent-change gecko-down&quot; style=&quot;font-size: 14px;&quot;><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 320 512&quot; fill=&quot;inherit&quot; style=&quot;height: 14px;&quot;><path d=&quot;M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z&quot;></path></svg>
+
+  3.8%
+</span></span></a><!----><!----><!----><!----><!----><div class=&quot;gecko-divider&quot; style=&quot;margin-top: 8px; margin-bottom: 16px;&quot;></div><div style=&quot;display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; font-size: 12px;&quot;><div class=&quot;gecko-dropdown gecko-text-dark&quot;><span tabindex=&quot;0&quot; class=&quot;gecko-button-soft gecko-dropdown-anchor gecko-semibold&quot;>
+        USD
+        <svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 512 512&quot; style=&quot;height: 12px;&quot;><path d=&quot;M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z&quot;></path></svg></span><div class=&quot;gecko-dropdown-items&quot; style=&quot;position: absolute; right: 0px; display: none;&quot;><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          AED
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          ARS
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          AUD
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          BCH
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          BDT
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          BHD
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          BITS
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          BMD
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          BNB
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          BRL
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          BTC
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          CAD
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          CHF
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          CLP
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          CNY
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          CZK
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          DKK
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          DOT
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          EOS
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          ETH
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          EUR
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          GBP
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          GEL
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          HKD
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          HUF
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          IDR
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          ILS
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          INR
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          JPY
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          KRW
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          KWD
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          LINK
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          LKR
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          LTC
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          MMK
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          MXN
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          MYR
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          NGN
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          NOK
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          NZD
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          PHP
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          PKR
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          PLN
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          RUB
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          SAR
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          SATS
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          SEK
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          SGD
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          THB
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          TRY
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          TWD
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          UAH
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          USD
+          <svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 448 512&quot; class=&quot;gecko-up&quot; style=&quot;height: 14px;&quot;><path d=&quot;M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z&quot;></path></svg></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          VEF
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          VND
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          XAG
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          XAU
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          XDR
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          XLM
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          XRP
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          YFI
+          <!----></div><div class=&quot;gecko-dropdown-item gecko-semibold gecko-text-dark&quot;>
+          ZAR
+          <!----></div></div></div><div class=&quot;gecko-text-light&quot;><a href=&quot;https://www.coingecko.com/?utm_source=neuralminer.io&amp;amp;utm_medium=coin_list_widget&amp;amp;utm_content=bitcoin%2Cethereum%2Ctether%2Cbinancecoin%2Csolana&quot; target=&quot;_blank&quot; class=&quot;gecko-text-light&quot;><div style=&quot;display: flex; align-items: center; column-gap: 4px;&quot;><span style=&quot;line-height: 1;&quot;>Powered by</span><svg width=&quot;16px&quot; height=&quot;16px&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><g clip-path=&quot;url(#clip0_10425_184458)&quot;><path d=&quot;M23.9999 11.9463C24.0297 18.5734 18.6814 23.9701 12.0539 23.9994C5.42675 24.0295 0.0301209 18.6812 0.000120938 12.054C-0.0293166 5.42621 5.31903 0.0300578 11.9461 0.000245333C18.5737 -0.0294734 23.9703 5.3185 23.9999 11.9463Z&quot; fill=&quot;#8FC640&quot;></path><path d=&quot;M23.096 11.9499C23.1235 18.0786 18.1776 23.0688 12.05 23.0961C5.92142 23.1238 0.931112 18.1783 0.903924 12.0496C0.876268 5.9213 5.82186 0.931736 11.9504 0.903799C18.0784 0.876518 23.0683 5.82202 23.096 11.9499Z&quot; fill=&quot;#F9E887&quot;></path><path d=&quot;M12.2019 1.62279C12.9011 1.48572 13.6273 1.50401 14.3352 1.61857C15.0428 1.73744 15.741 1.9556 16.3724 2.3006C17.0048 2.64879 17.5516 3.12026 18.0963 3.56341C18.6392 4.01154 19.1822 4.45854 19.6979 4.95044C20.218 5.43691 20.6851 5.98948 21.0631 6.59988C21.448 7.20523 21.7833 7.84779 22.0206 8.52776C22.4839 9.88854 22.6446 11.3555 22.4139 12.7543H22.3426C22.1105 11.3674 21.7955 10.0466 21.3033 8.78923C21.0637 8.16026 20.8044 7.53691 20.4827 6.94151C20.154 6.35135 19.8026 5.76879 19.403 5.20901C18.9993 4.65457 18.5206 4.1441 17.9557 3.74791C17.3929 3.34657 16.7447 3.0866 16.1179 2.83948C15.4903 2.58879 14.8645 2.34776 14.2128 2.15979C13.5621 1.96704 12.8951 1.83101 12.2012 1.69432L12.2018 1.6226L12.2019 1.62279Z&quot; fill=&quot;white&quot;></path><path d=&quot;M17.6272 8.02945C16.8217 7.79629 15.9876 7.46554 15.1419 7.13208C15.0933 6.9202 14.9054 6.65592 14.5258 6.33286C13.9735 5.85398 12.9364 5.86654 12.0404 6.07833C11.0506 5.84517 10.0736 5.76229 9.13522 5.98748C1.463 8.10183 5.81291 13.2577 2.99609 18.4418C3.39716 19.2915 7.71716 24.253 13.968 22.9219C13.968 22.9219 11.8306 17.7845 16.6552 15.3185C20.5683 13.3183 23.3953 9.60417 17.6271 8.02954L17.6272 8.02945Z&quot; fill=&quot;#8CC540&quot;></path><path d=&quot;M18.574 11.4074C18.5747 11.664 18.3674 11.8733 18.1111 11.8741C17.8544 11.8755 17.6454 11.6682 17.6441 11.4111C17.6426 11.1545 17.8503 10.9459 18.1069 10.9448C18.3636 10.9434 18.5722 11.1504 18.574 11.4074Z&quot; fill=&quot;white&quot;></path><path d=&quot;M12.04 6.07843C12.5987 6.11827 14.6201 6.77771 15.1415 7.13218C14.7098 5.87143 13.2442 5.70362 12.04 6.07843Z&quot; fill=&quot;#039447&quot;></path><path d=&quot;M12.5716 9.26612C12.5716 10.4512 11.6109 11.4112 10.4263 11.4112C9.24179 11.4112 8.28076 10.4512 8.28076 9.26612C8.28076 8.08103 9.24151 7.12122 10.4263 7.12122C11.6111 7.12122 12.5716 8.08159 12.5716 9.26612Z&quot; fill=&quot;white&quot;></path><path d=&quot;M11.9353 9.28564C11.9353 10.1191 11.2594 10.7945 10.4263 10.7945C9.59312 10.7945 8.91699 10.1192 8.91699 9.28564C8.91699 8.45211 9.59284 7.77673 10.4263 7.77673C11.2597 7.77673 11.9353 8.4522 11.9353 9.28564Z&quot; fill=&quot;#595A5C&quot;></path><path d=&quot;M20.3118 12.353C18.5739 13.5777 16.5964 14.507 13.7923 14.507C12.48 14.507 12.2135 13.1124 11.3461 13.7962C10.8979 14.1493 9.319 14.9385 8.06603 14.8786C6.8019 14.8185 4.78281 14.0835 4.21581 11.4094C3.99175 14.0835 3.87671 16.0541 2.87256 18.3119C4.87271 21.5139 9.64028 23.9839 13.9677 22.9218C13.5032 19.6747 16.3409 16.4938 17.9396 14.8664C18.5451 14.25 19.7048 13.2438 20.3118 12.353Z&quot; fill=&quot;#8CC540&quot;></path><path d=&quot;M20.2443 12.4332C19.7046 12.9247 19.0623 13.2896 18.4085 13.6112C17.7481 13.9228 17.059 14.1771 16.3476 14.3613C15.6387 14.5447 14.8981 14.6828 14.1485 14.6151C13.4118 14.5501 12.6337 14.2916 12.1372 13.7309L12.1604 13.7037C12.7732 14.0984 13.4716 14.2375 14.1705 14.2578C14.8695 14.276 15.5815 14.2242 16.2828 14.0823C16.9828 13.9376 17.6711 13.7219 18.3361 13.4475C18.9993 13.1738 19.6556 12.8564 20.2213 12.4059L20.2443 12.4332Z&quot; fill=&quot;#595A5C&quot;></path></g><defs><clipPath id=&quot;clip0_10425_184458&quot;><rect width=&quot;24&quot; height=&quot;24&quot; fill=&quot;white&quot;></rect></clipPath></defs></svg><span style=&quot;line-height: 1;&quot;>CoinGecko</span></div></a></div></div></div><style type=&quot;text/css&quot;>/**************************************************/
+/*               Moon Design colors               */
+/**************************************************/
+.gecko-widget {
+  --color-moon-50: #DFE5EC;
+  --color-moon-100: #BECBDA;
+  --color-moon-200: #9EB0C7;
+  --color-moon-300: #7D96B5;
+  --color-moon-400: #5D7CA2;
+  --color-moon-500: #4A6382;
+  --color-moon-600: #384A61;
+  --color-moon-700: #212D3B;
+  --color-moon-800: #1B232D;
+  --color-moon-900: #0D1217;
+
+  --color-gray-50: #F8FAFC;
+  --color-gray-100: #F1F5F9;
+  --color-gray-200: #EFF2F5;
+  --color-gray-300: #CBD5E1;
+  --color-gray-400: #94A3B8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1E293B;
+  --color-gray-900: #0F172A;
+
+  --color-primary-50: #F3FCE5;
+  --color-primary-100: #E8FCC9;
+  --color-primary-200: #CDF995;
+  --color-primary-300: #A6EF5F;
+  --color-primary-400: #80E038;
+  --color-primary-500: #4BCC00;
+  --color-primary-600: #35AF00;
+  --color-primary-700: #239200;
+  --color-primary-800: #157600;
+  --color-primary-900: #0B6100;
+
+  --color-success-400: #32CA5B;
+  --color-success-500: #00A83E;
+  --color-danger-500: #FF3A33;
+}
+
+
+/**************************************************/
+/*                Light mode styles               */
+/**************************************************/
+
+/* 1. Main widget styling */
+.gecko-widget {
+  font-size: 14px;
+  line-height: 1 !important;
+
+  background: white;
+  color: var(--color-gray-500);
+}
+
+.gecko-widget,
+.gecko-font {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;
+}
+
+.gecko-outline {
+  border-radius: 12px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-gray-200);
+}
+
+.gecko-transparent-background {
+  background: transparent !important;
+}
+
+
+/* 2. Shared components styling */
+.gecko-price sub {
+  line-height: 0;
+}
+
+.gecko-percent-change {
+  display: inline-flex;
+  white-space: nowrap;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.gecko-up {
+  color: var(--color-success-500);
+  fill: var(--color-success-500);
+}
+
+.gecko-down {
+  color: var(--color-danger-500);
+  fill: var(--color-danger-500);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: var(--color-primary-500);
+}
+
+.gecko-skeleton {
+  animation: pulse 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background-color: var(--color-gray-200);
+  min-height: 12px;
+  min-width: 80px;
+  border-radius: 4px;
+}
+
+.gecko-skeleton.stubby {
+  min-height: 16px;
+  min-width: 56px;
+}
+
+.gecko-spin {
+  animation: spin 1000ms infinite linear;
+}
+
+
+/* 3. Utility classes styling */
+.gecko-regular {
+  font-weight: 400;
+}
+
+.gecko-medium {
+  font-weight: 500;
+}
+
+.gecko-semibold {
+  font-weight: 600;
+}
+
+.gecko-bold {
+  font-weight: 700;
+}
+
+.gecko-text-light {
+  color: var(--color-gray-500);
+  fill: var(--color-gray-500);
+}
+
+.gecko-text-dark {
+  color: var(--color-gray-900);
+  fill: var(--color-gray-900);
+}
+
+.gecko-text-primary {
+  color: var(--color-primary-500);
+  fill: var(--color-primary-500);
+}
+
+.gecko-divider {
+  width: 100%;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.gecko-text-xs {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem; /* 16px */
+}
+
+.gecko-text-base {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+}
+
+.gecko-text-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.gecko-text-xl {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.gecko-text-2xl {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.gecko-text-3xl {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+}
+
+
+/**************************************************/
+/*                Dark mode styles                */
+/**************************************************/
+
+/* 1. Main widget styling */
+.gecko-widget.gecko-dark {
+  background: var(--color-moon-900);
+  color: var(--color-moon-200);
+
+  font-weight: 300;
+}
+
+.gecko-outline.gecko-dark {
+  border-color: var(--color-moon-600);
+}
+
+
+/* 2. Shared components styling */
+.gecko-dark .gecko-up {
+  color: var(--color-success-400);
+  fill: var(--color-success-400);
+}
+
+.gecko-dark a:hover {
+  color: var(--color-primary-400);
+}
+
+.gecko-dark .gecko-skeleton {
+  background-color: var(--color-moon-700);
+}
+
+
+/* 3. Utility classes styling */
+.gecko-dark .gecko-regular {
+  font-weight: 300;
+}
+
+.gecko-dark .gecko-medium {
+  font-weight: 400;
+}
+
+.gecko-dark .gecko-semibold {
+  font-weight: 500;
+}
+
+.gecko-dark .gecko-bold {
+  font-weight: 600;
+}
+
+.gecko-dark .gecko-text-light {
+  color: var(--color-moon-200);
+  fill: var(--color-moon-200);
+}
+
+.gecko-dark .gecko-text-dark {
+  color: var(--color-moon-50);
+  fill: var(--color-moon-50);
+}
+
+.gecko-dark .gecko-text-primary {
+  color: var(--color-primary-400);
+  fill: var(--color-primary-400);
+}
+
+.gecko-dark .gecko-divider {
+  border-top-color: var(--color-moon-700);
+}
+
+
+/**************************************************/
+/*                    Keyframes                   */
+/**************************************************/
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/** Default style overrides **/
+.gecko-outline, .gecko-widget:not(.gecko-transparent-background) {
+  padding: 12px;
+}
+
+
+/** Widget styling **/
+.gecko-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  padding: 10px 8px;
+  border-radius: 8px;
+}
+
+.gecko-list-item:hover {
+  text-decoration: none;
+  background-color: var(--color-gray-200);
+}
+
+.gecko-dark .gecko-list-item:hover {
+  background-color: var(--color-moon-600);
+}
+
+
+/** Dropdown items **/
+.gecko-dropdown {
+  position: relative;
+}
+
+.gecko-dropdown-items {
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
+
+  min-width: 200px;
+  max-height: 200px;
+  overflow-y: auto;
+
+  padding: 8px;
+
+  border-radius: 8px;
+  background: white;
+  border: 2px solid var(--color-gray-200);
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.10), 0 10px 8px 0 rgba(0, 0, 0, 0.10);
+}
+
+.gecko-dark .gecko-dropdown-items {
+  background: var(--color-moon-700);
+  border: 2px solid var(--color-moon-600);
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.10), 0 10px 8px 0 rgba(0, 0, 0, 0.10);
+}
+
+
+.gecko-dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 16px 8px;
+
+  border-radius: 8px;
+}
+
+.gecko-dropdown-item:hover {
+  background-color: var(--color-gray-200);
+}
+
+.gecko-dark .gecko-dropdown-item:hover {
+  background-color: var(--color-moon-600);
+}
+
+.gecko-button-soft {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  line-height: 1.425 !important;
+
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+
+  background-color: var(--color-gray-200);
+}
+
+.gecko-dark .gecko-button-soft {
+  background-color: var(--color-moon-700);
+}
+
+.gecko-button-soft:hover {
+  background-color: var(--color-gray-300);
+}
+
+.gecko-dark .gecko-button-soft:hover {
+  background-color: var(--color-moon-600);
+}
+</style>"></gecko-coin-list-widget>
+          </center>
+          <div data-v-0b7f4d50="" class="list-btn-info">
+            <div data-v-0b7f4d50="" class="line">
+              <a data-v-0b7f4d50="" class="card" href="wallet.html"><img data-v-0b7f4d50=""
+                  src="deposit.png" loading="lazy" alt="">
+                <div data-v-0b7f4d50="" class="txtBlack text-bold text-df">Deposit</div>
+              </a>
+              <a data-v-0b7f4d50="" class="card" href="wallet.html"><img data-v-0b7f4d50=""
+                  src="withdraw.png" loading="lazy" alt="">
+                <div data-v-0b7f4d50="" class="txtBlack text-bold text-df">Withdrawal</div>
+              </a>
+              <a data-v-0b7f4d50="" class="card" href="wallet.html"><img data-v-0b7f4d50=""
+                  src="TT.png" loading="lazy" alt="">
+                <div data-v-0b7f4d50="" class="txtBlack text-bold text-df">Team</div>
+              </a>
+            </div>
+            <div data-v-0b7f4d50="" class="line">
+              <a data-v-0b7f4d50="" class="card" href="wallet.html"
+                ><img data-v-0b7f4d50="" src="TT.png" loading="lazy" alt="">
+                <div data-v-0b7f4d50="" class="txtBlack text-bold text-df">Update Balance</div>
+              </a>
+              <a data-v-0b7f4d50="" class="card" href="wallet.html"><img data-v-0b7f4d50=""
+                  src="appm.png" loading="lazy" alt="">
+                <div data-v-0b7f4d50="" class="txtBlack text-bold text-df">Connect Wallet</div>
+              </a>
+              <a data-v-0b7f4d50="" class="card" href=""><img data-v-0b7f4d50=""
+                  src="mining_line.png" loading="lazy" alt="">
+                <div data-v-0b7f4d50="" class="txtBlack text-bold text-df">Airdrop  </div>
+              </a>
+            </div>
+          </div>
+          <div data-v-0b7f4d50="" class="listColInfo">
+            <div data-v-0b7f4d50="" class="column">
+              <div data-v-0b7f4d50="" class="txtBlack title">Total</div>
+              <div data-v-0b7f4d50="" class="txtBlack title">Earnings</div>
+              <div data-v-0b7f4d50="" class="number"><span data-v-0b7f4d50=""
+                  class="num text-bold text-xl txtBlue mr-4">0.00</span><span data-v-0b7f4d50=""
+                  class="text-sm">USDT</span></div>
+            </div>
+            <div data-v-0b7f4d50="" class="column">
+              <div data-v-0b7f4d50="" class="txtBlack title">Active</div>
+              <div data-v-0b7f4d50="" class="txtBlack title">Deposit</div>
+              <div data-v-0b7f4d50="" class="number"><span data-v-0b7f4d50=""
+                  class="num text-bold text-xl txtBlue mr-4">0.00</span><span data-v-0b7f4d50=""
+                  class="text-sm">USDT</span></div>
+            </div>
+          </div>
+          <div data-v-0b7f4d50="" class="listColInfo">
+            <div data-v-0b7f4d50="" class="column" style="margin-top: 0px;">
+              <div data-v-0b7f4d50="" class="txtBlack title">Pending</div>
+              <div data-v-0b7f4d50="" class="txtBlack title">Withdraw</div>
+              <div data-v-0b7f4d50="" class="number"><span data-v-0b7f4d50=""
+                  class="num text-bold text-xl txtBlue mr-4">0.00</span><span data-v-0b7f4d50=""
+                  class="text-sm">USDT</span></div>
+            </div>
+            <div data-v-0b7f4d50="" class="column" style="margin-top: 0px;">
+              <div data-v-0b7f4d50="" class="txtBlack title">Total</div>
+              <div data-v-0b7f4d50="" class="txtBlack title">Withdraw</div>
+              <div data-v-0b7f4d50="" class="number"><span data-v-0b7f4d50=""
+                  class="num text-bold text-xl txtBlue mr-4">0.00</span><span data-v-0b7f4d50=""
+                  class="text-sm">USDT</span></div>
+            </div>
+          </div>
+          <center><a href="?a=help2"><img src="air10.png" alt="" width="398" height="109"></a>
+          </center><a href="?a=help2">
+          </a>
+          <div data-v-0b7f4d50="" class="txtInfo"><a href="?a=help2">
+              <div data-v-0b7f4d50="" class="title txtBlack text-bold"></div>
+              <div data-v-0b7f4d50="" class="txtGray9 text-center"></div>
+            </a><a href=""><img data-v-0b7f4d50="" src="555.png" loading="lazy" alt="" class="imgInfo">
+
+
+            </a></div><a href="">
+
+          </a>
+        </div><a href="">
+        </a>
+      </div><a href="">
+
+      </a>
+      <div data-v-d6ac7d4a="" data-v-035a15ff="" class="tab-bar-wrap"><a href="">
+        </a>
+        <div data-v-d6ac7d4a="" class="tab-bar"><a href="">
+          </a><a data-v-d6ac7d4a="" class="tab-item" href="">
+            <div data-v-d6ac7d4a="" class="tab-item-inner active">
+              <div data-v-d6ac7d4a="" class="tab-item-icon"><img data-v-d6ac7d4a=""
+                  src="urn:scrapbook:download:error:static/img/tabbar/home_line.png"
+                  style="display: none;"><img data-v-d6ac7d4a="" src="home_blue.png"></div>
+              <!---->
+              <!---->
+              <!---->
+              <div data-v-d6ac7d4a="" class="tab-item-label">Home</div>
+            </div>
+          </a>
+          <a data-v-d6ac7d4a="" class="tab-item" href="?a=trading">
+            <div data-v-d6ac7d4a="" class="tab-item-inner">
+              <div data-v-d6ac7d4a="" class="tab-item-icon"><img data-v-d6ac7d4a="" src="mining_line.png"><img
+                  data-v-d6ac7d4a=""
+                  src="urn:scrapbook:download:error:static/img/tabbar/mining_blue.png"
+                  style="display: none;"></div>
+              <!---->
+              <!---->
+              <!---->
+              <div data-v-d6ac7d4a="" class="tab-item-label">Features</div>
+            </div>
+          </a>
+          <a data-v-d6ac7d4a="" class="tab-item" href="wallet.html">
+            <div data-v-d6ac7d4a="" class="tab-item-inner">
+              <div data-v-d6ac7d4a="" class="tab-item-icon"><img data-v-d6ac7d4a=""
+                  src="urn:scrapbook:download:error:static/img/tabbar/tab_mid_blue.png"><img
+                  data-v-d6ac7d4a=""
+                  src="urn:scrapbook:download:error:static/img/tabbar/tab_mid_blue.png"
+                  style="display: none;"></div>
+              <div data-v-d6ac7d4a="" class="vip-icon-wrap"></div>
+              <div data-v-d6ac7d4a="" class="mask"></div><img data-v-d6ac7d4a="" src="VIP.png" class="vip-icon">
+              <div data-v-d6ac7d4a="" class="tab-item-label">Invest</div>
+            </div>
+          </a>
+          <a data-v-d6ac7d4a="" class="tab-item" href="?a=referallinks">
+            <div data-v-d6ac7d4a="" class="tab-item-inner">
+              <div data-v-d6ac7d4a="" class="tab-item-icon"><img data-v-d6ac7d4a="" src="share_line.png"><img
+                  data-v-d6ac7d4a=""
+                  src="urn:scrapbook:download:error:static/img/tabbar/share_blue.png"
+                  style="display: none;"></div>
+              <!---->
+              <!---->
+              <!---->
+              <div data-v-d6ac7d4a="" class="tab-item-label">Share</div>
+            </div>
+          </a>
+          <a data-v-d6ac7d4a="" class="tab-item" href="?a=mine">
+            <div data-v-d6ac7d4a="" class="tab-item-inner">
+              <div data-v-d6ac7d4a="" class="tab-item-icon"><img data-v-d6ac7d4a="" src="mine_line.png"><img
+                  data-v-d6ac7d4a=""
+                  src="urn:scrapbook:download:error:static/img/tabbar/mine_blue.png"
+                  style="display: none;"></div>
+              <!---->
+              <!---->
+              <!---->
+              <div data-v-d6ac7d4a="" class="tab-item-label">Profile</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="van-overlay" style="display: none;">
+      <div class="wrapper">
+        <div class="van-loading van-loading--spinner"><span
+            class="van-loading__spinner van-loading__spinner--spinner"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="van-toast van-toast--middle van-toast--loading" style="z-index: 2016; display: none;">
+    <div class="van-loading van-loading--circular van-toast__loading"><span
+        class="van-loading__spinner van-loading__spinner--circular"><svg viewBox="25 25 50 50"
+          class="van-loading__circular">
+          <circle cx="50" cy="50" r="20" fill="none"></circle>
+        </svg></span></div>
+  </div>
+  <div class="gtranslate_wrapper gt_container--c8la1f"><!-- GTranslate: https://gtranslate.com -->
+    <div id="google_translate_element2"></div>
+    <div id="gt_float_wrapper" style="position:fixed;bottom:20px;left:20px;z-index:999999;">
+      <div class="gt_float_switcher notranslate" style="opacity: 1;">
+        <div class="gt_options" style="display:none"><a href="#" class="nturl gt-current" data-gt-lang="en"><img
+              data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/en-us.png" alt="en"> English</a><a href="#"
+            class="nturl" data-gt-lang="fr"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/fr.png" alt="fr">
+            French</a><a href="#" class="nturl" data-gt-lang="es"><img
+              data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/es.png" alt="es"> Spanish</a><a href="#"
+            class="nturl" data-gt-lang="ru"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ru.png" alt="ru">
+            Russian</a><a href="#" class="nturl" data-gt-lang="ar"><img
+              data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/ar.png" alt="ar"> Arabic</a><a href="#"
+            class="nturl" data-gt-lang="id"><img data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/id.png" alt="id">
+            Indonesian</a><a href="#" class="nturl" data-gt-lang="it"><img
+              data-gt-lazy-src="https://cdn.gtranslate.net/flags/32/it.png" alt="it"> Italian</a></div>
+        <div class="gt-selected">
+          <div class="gt-current-lang"><img src="en-us.png" alt="en"> <span class="gt-lang-code">en</span> <span
+              class="gt_float_switcher-arrow"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script
+    data-scrapbook-elem="basic-loader">(function () { var k1 = "data-scrapbook-shadowdom", k2 = "data-scrapbook-canvas", k3 = "data-scrapbook-input-indeterminate", k4 = "data-scrapbook-input-checked", k5 = "data-scrapbook-option-selected", k6 = "data-scrapbook-input-value", k7 = "data-scrapbook-textarea-value", k8 = "data-scrapbook-adoptedstylesheets", k9 = /^data-scrapbook-adoptedstylesheet-(\d+)$/, k10 = "data-scrapbook-shadowdom-mode", k11 = "data-scrapbook-shadowdom-clonable", k12 = "data-scrapbook-shadowdom-delegates-focus", k13 = "data-scrapbook-shadowdom-serializable", k14 = "data-scrapbook-shadowdom-slot-assignment", k15 = "data-scrapbook-slot-assigned", k16 = "data-scrapbook-slot-index", k17 = /^scrapbook-slot-index=(\d+)$/; k18 = '/scrapbook-slot-index'; d = document, r = d.documentElement, $s = !!r.attachShadow, $as = !!d.adoptedStyleSheets, $c = !!window.HTMLCanvasElement, $sa = !!d.createElement('slot').assign, sle = [], sls = [], slt = function (r) { if ($sa) { var E = r.childNodes, i, e, s, m; for (i = 0; i < E.length; i++) { e = E[i]; if (e.nodeType === 8) { s = e.nodeValue; if (m = s.match(k17)) { s = e.nextSibling; if (s.nodeType === 3) { sls[m[1]] = s; } r.removeChild(e); i--; } else if (s === k18) { r.removeChild(e); i--; } } } } }, sl = function () { var i = sle.length, j, d, e; while (i--) { d = sle[i]; e = d.elem; d = d.value.split(','); j = d.length; while (j--) { d[j] = sls[parseInt(d[j], 10)]; } try { e.assign.apply(e, d); } catch (ex) { console.error(ex); } } }, asl = (function (r) { var l = [], E, i, e, m, c, j; if ($as) { E = r.attributes; i = E.length; while (i--) { e = E[i]; if (!(m = e.nodeName.match(k9))) { continue; } c = l[m[1]] = new CSSStyleSheet(); r.removeAttribute(m[0]); m = e.nodeValue.split('\n\n'); j = m.length; while (j--) { try { m[j] && c.insertRule(m[j]); } catch (ex) { console.error(ex); } } } } return l; })(r), as = function (d, e) { var l, i, I; if ($as && (l = e.getAttribute(k8)) !== null) { l = l.split(','); for (i = 0, I = l.length; i < I; i++) { d.adoptedStyleSheets.push(asl[l[i]]); } e.removeAttribute(k8); } }, fn = function (r) { var E = r.querySelectorAll ? r.querySelectorAll("*") : r.getElementsByTagName("*"), i = E.length, e, d, s, m; while (i--) { e = E[i]; s = e.shadowRoot; if ($s && (d = e.getAttribute(k1))) { if (!s) { try { s = e.attachShadow({ mode: (m = e.getAttribute(k10)) !== null ? m : 'open', clonable: e.hasAttribute(k11), delegatesFocus: e.hasAttribute(k12), serializable: e.hasAttribute(k13), slotAssignment: (m = e.getAttribute(k14)) !== null ? m : void (0), }); s.innerHTML = d; } catch (ex) { console.error(ex); } } e.removeAttribute(k1); e.removeAttribute(k10); e.removeAttribute(k11); e.removeAttribute(k12); e.removeAttribute(k13); e.removeAttribute(k14); } if ($c && (d = e.getAttribute(k2)) !== null) { (function () { var c = e, g = new Image(); g.onload = function () { c.getContext('2d').drawImage(g, 0, 0); }; g.src = d; })(); e.removeAttribute(k2); } if ((d = e.getAttribute(k3)) !== null) { e.indeterminate = true; e.removeAttribute(k3); } if ((d = e.getAttribute(k4)) !== null) { e.checked = d === 'true'; e.removeAttribute(k4); } if ((d = e.getAttribute(k5)) !== null) { e.selected = d === 'true'; e.removeAttribute(k5); } if ((d = e.getAttribute(k6)) !== null) { e.value = d; e.removeAttribute(k6); } if ((d = e.getAttribute(k7)) !== null) { e.value = d; e.removeAttribute(k7); } if ($sa && (d = e.getAttribute(k15)) !== null) { sle.push({ elem: e, value: d }); e.removeAttribute(k15); } if ($sa && (d = e.getAttribute(k16)) !== null) { sls[d] = e; e.removeAttribute(k16); } if (s) { slt(e); as(s, e); fn(s); } } }; as(d, r); fn(d); sl(); })()</script>
+</body>
+
+</html>
